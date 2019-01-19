@@ -13,27 +13,27 @@
         <section class="row">
             Starting Bet: $ <input id="startingBet" value="0.00"></input>
         </section>
-        <section> <button onclick=play() id="startButton" type="submit">Play</button></section>
+        <section> <button onclick="play()" id="startButton" type="submit">Play</button></section>
         <section class="row" id="resultsSection" style="display:none">
             <h4>Results</h4>
             <table class="table table-bordered table-dark text-left">
                     <tbody>
-                      <tr>
+                      <tr >
                         <th scope="row">Starting Bet</th>
-                        <td id="startBet"></td>
+                        <td><input id="startBet"vtype="number" value="" disabled></td>
                       </tr>
                       <tr>
                         <th scope="row">Max Amout of Money Reached</th>
-                        <td id="maxMoney"</td>
+                        <td><input  id="maxMoney"vtype="number" value="" disabled></td>
                       </tr>
-                      <tr>
+                      <tr >
                         <th scope="row">Number of Rolls at Max $</th>
-                        <td id="rollsMax"></td>
+                        <td><input id="rollsMax" type="number" value="" disabled></td>
                       </tr>
                     </tbody>
                   </table>
             <br>
-            <button id="resetButton" type="reset">Reset</button>
+            <button id="resetButton" type="reset" onclick= "reset()">Reset</button>
         </section>
     </main>
     <footer class="footer fixed-bottom" style="border-style:solid; border-width: 1px">

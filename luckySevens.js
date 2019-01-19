@@ -35,6 +35,19 @@ for (k = 0; k < money.length; k++){
     }
 }
 console.log("Rolls at max money" + money.indexOf(mostMoney))
+console.log("Total Rolls: " + (money.length - 1))
+document.getElementById("startingBet").value = gameMoney
+}
+console.log("most" + mostMoney)
+console.log(money)
+if (gameMoney == 0){
+    document.getElementById("resultsSection").style.display = "block";
+    document.getElementById("startBet").value = "$" + money[0];
+    document.getElementById("maxMoney").value = "$" + mostMoney;
+    document.getElementById("rollsMax").value = money.indexOf(mostMoney)
+}
 }
 
+var reset = function () {
+    
 }
