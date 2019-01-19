@@ -7,6 +7,7 @@ var mostMoney = 0
 var diceSum = 0
 if (gameMoney == NaN || gameMoney <= 0) {
     alert("Please enter a bet greater than zero")
+    return false;
 }
 while(gameMoney > 0){
     var diceOne =   Math.floor(Math.random() * 6) + 1
@@ -36,18 +37,24 @@ for (k = 0; k < money.length; k++){
 }
 console.log("Rolls at max money" + money.indexOf(mostMoney))
 console.log("Total Rolls: " + (money.length - 1))
+console.log("most money" + mostMoney)
 document.getElementById("startingBet").value = gameMoney
 }
-console.log("most" + mostMoney)
-console.log(money)
+
 if (gameMoney == 0){
     document.getElementById("resultsSection").style.display = "block";
     document.getElementById("startBet").value = "$" + money[0];
+    document.getElementById("totalRolls").value = money.length -1;
     document.getElementById("maxMoney").value = "$" + mostMoney;
     document.getElementById("rollsMax").value = money.indexOf(mostMoney)
 }
+
 }
 
 var reset = function () {
-    
+    document.getElementById("startingBet").value = "0.00"
+    document.getElementById("resultsSection").style.display = "none";
+    document.getElementById("startBet").value = 0;
+    document.getElementById("maxMoney").value = 0;
+    document.getElementById("rollsMax").value = 0;
 }

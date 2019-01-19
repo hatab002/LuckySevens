@@ -5,29 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Lucky Sevens</title>
 </head>
 <body class="text-center">
     <header><h1>Lucky Sevens</h1></header>
-    <main class="col-4" style="margin-left:30%; margin-top:10%;">
+    <main class="col-4" style="margin-top:50px; display: inline-block">
         <section class="row">
             Starting Bet: $ <input id="startingBet" value="0.00"></input>
         </section>
+        <br>
         <section> <button onclick="play()" id="startButton" type="submit">Play</button></section>
         <section class="row" id="resultsSection" style="display:none">
+                <hr />
             <h4>Results</h4>
             <table class="table table-bordered table-dark text-left">
                     <tbody>
                       <tr >
                         <th scope="row">Starting Bet</th>
-                        <td><input id="startBet"vtype="number" value="" disabled></td>
+                        <td><input id="startBet" type="text" value="" disabled></td>
                       </tr>
                       <tr>
-                        <th scope="row">Max Amout of Money Reached</th>
-                        <td><input  id="maxMoney"vtype="number" value="" disabled></td>
+                        <th scope="row">Total Rolls before going broke</th>
+                        <td><input  id="totalRolls" type="number" value="" disabled></td>
+                    </tr>
+                      <tr>
+                        <th scope="row">Highest Amount Won</th>
+                        <td><input  id="maxMoney" type="text" value="" disabled></td>
                       </tr>
                       <tr >
-                        <th scope="row">Number of Rolls at Max $</th>
+                        <th scope="row">Roll Count at Highest Amount Won</th>
                         <td><input id="rollsMax" type="number" value="" disabled></td>
                       </tr>
                     </tbody>
