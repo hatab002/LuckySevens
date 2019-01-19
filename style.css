@@ -2,8 +2,3 @@ body{
     font-family: 'Gochi Hand', cursive;
     background-image: radial-gradient(red, white )  
 }
-button{
-    border-radius: 10px;
-    background-color: black;
-    color: white;
-}

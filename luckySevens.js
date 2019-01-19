@@ -2,7 +2,6 @@
 var play = function (){
 var gameMoney = document.getElementById("startingBet").value
 var money = [parseInt(gameMoney)]
-var moneyTotal= 0
 var mostMoney = 0
 var diceSum = 0
 if (gameMoney == NaN || gameMoney <= 0) {
@@ -47,11 +46,13 @@ if (gameMoney == 0){
     document.getElementById("totalRolls").value = money.length -1;
     document.getElementById("maxMoney").value = "$" + mostMoney;
     document.getElementById("rollsMax").value = money.indexOf(mostMoney)
+
 }
 
 }
 
 var reset = function () {
+    var money = [];
     document.getElementById("startingBet").value = "0.00"
     document.getElementById("resultsSection").style.display = "none";
     document.getElementById("startBet").value = 0;
