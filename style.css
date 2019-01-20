@@ -2,3 +2,10 @@ body{
     font-family: 'Gochi Hand', cursive;
     background-image: radial-gradient(red, white )  
 }
+.jumbotron {
+    border-radius: 5px; 
+    display: block;
+}
+#resetButton {
+    margin-bottom: 50px !important;
+}
